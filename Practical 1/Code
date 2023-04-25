@@ -1,0 +1,16 @@
+Practical 1 , IMPORT LEGACY DATA
+
+Excel: Select get data select the excel file and tick the sheet you want to load then click load
+Look right side it will appear and then right click an edit query
+
+OData:
+https://services.odata.org/V3/Northwind/Northwind.svc/
+
+SQL Server:
+SSM open, right click on "Databases" and click create new database, give any name and click ok
+Drop down that new database and right click on "table" >new>table
+Give any 2-3 headers and set a primary key
+
+Go to the properties of the SSM owner and copy the product name
+
+Now open Power Bi and click get data from sql server and paste the product name there
