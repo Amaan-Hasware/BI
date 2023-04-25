@@ -1,0 +1,16 @@
+# removing the species from data to cluster
+newiris <- iris
+newiris$Species <- NULL
+
+# apply the k-means functions to newiris and store the result in kmeans.results
+kc <- kmeans(newiris, 3)
+
+print(kc)
+
+# compare the clusters label
+table(iris$Species, kc$cluster)
+
+# plot the cluster and their centers
+plot(newiris[c("Sepal.Length", "Sepal.Width")], col = kc$cluster)
+points(kc$centers[, c("Sepal.Length", "Sepal.Width")], col = 1:3, pch = 8, cex = 2)
+
