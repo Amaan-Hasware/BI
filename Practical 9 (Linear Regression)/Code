@@ -1,0 +1,28 @@
+#value of height
+
+x <- c(151, 174, 138, 186, 128, 136, 179, 163, 152, 131)
+#value of weight
+
+y <- c(63, 81, 56, 91, 47, 57, 76, 72, 62, 48)
+
+# apply the Im() function.
+
+relation <- lm(y~x)
+
+#find the weight of a +g with height 170
+
+a <- data.frame(x = 170)
+
+#predict function takes two arguements (object,newdata)
+result <- predict(relation,a)
+
+print (result)
+
+#give the for chart
+
+png(file="LinearRegression.png")
+
+#plotting the graph
+plot(y,x,col="blue", main="Height and weight regresssion",
+     abline(lm(x~y)), cex=1.3, pch=16, xlab="Weight in KG",ylab="Height in cm")
+dev.off()
